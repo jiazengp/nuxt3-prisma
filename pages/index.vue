@@ -1,6 +1,13 @@
 <template>
   <div>
     <Logos mb-6 />
+     <div
+    v-for="{id, title} in posts"
+    :key="id"
+  >
+    {{id}} - {{title}}
+
+  </div>
     <Suspense>
       <PageView />
       <template #fallback>
@@ -12,3 +19,11 @@
     <InputEntry />
   </div>
 </template>
+
+<script setup lang="ts">
+import { useNuxtApp } from 'nuxt3';
+
+const nuxtApp = useNuxtApp();
+
+const posts = await nuxtApp.$prisma.post.findMany();
+</script>

@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt3'
+import TypedRouter from 'nuxt-typed-router'
 
 export default defineNuxtConfig({
   meta: {
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
+    TypedRouter,
   ],
   vueuse: {
     ssrHandlers: true,

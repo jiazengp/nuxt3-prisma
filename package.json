@@ -1,23 +1,26 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
+    "build": "cp node_modules/.prisma/client/package.json node_modules/.prisma && nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "pinia": "^2.0.9"
+    "pinia": "^2.0.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.14.2",
-    "@iconify-json/carbon": "^1.0.12",
+    "@iconify-json/carbon": "^1.0.14",
     "@iconify-json/twemoji": "^1.0.2",
     "@pinia/nuxt": "^0.1.8",
-    "@unocss/nuxt": "^0.20.1",
-    "@vueuse/nuxt": "^7.4.2",
-    "eslint": "^8.5.0",
+    "@prisma/client": "^3.9.1",
+    "@unocss/nuxt": "^0.20.4",
+    "@vueuse/nuxt": "^7.5.5",
+    "eslint": "^8.8.0",
+    "nuxt-typed-router": "^1.1.1",
     "nuxt3": "latest",
-    "typescript": "^4.5.4"
+    "prisma": "^3.9.1",
+    "typescript": "^4.5.5"
   },
   "pnpm": {
     "overrides": {
